@@ -23,7 +23,6 @@ public class MainActivity extends Activity implements Listener, WASDControllerVi
 
     private static final String TAG = MainActivity.class.getSimpleName();
     private final int REQUEST_TURN_BLUETOOTH = 1;
-    private static int STARTORSTOP = 0;
 
     private BluetoothController bluetoothController;
     private UIController uiController;
@@ -126,13 +125,7 @@ public class MainActivity extends Activity implements Listener, WASDControllerVi
 
         switch (command) {
             case WASDControllerView.COMMAND_ACTION:
-                if(STARTORSTOP == 0) {
-                    text = "start";
-                    STARTORSTOP = 1;
-                } else {
-                    text = "stop";
-                    STARTORSTOP = 0;
-                }
+                text = "STOP";
                 break;
             case WASDControllerView.COMMAND_UP:
                 text = "UP";
